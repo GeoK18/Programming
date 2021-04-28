@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	var dollar = prompt ("Введите курс Доллара:");
+	var euro = prompt ("Введите курс Евро:");
+	var rub = prompt ("Введите сумму в рублях, которую хотите обменять:");
+
+	dollar = parseInt(dollar);
+	euro = parseInt(euro);
+	rub = parseInt(rub);
+
+	var totalD = rub / dollar;
+	var totalE = rub / euro;
+//.toFixed(2) округляет значение до 2х знаков после запятой
+	alert("Вы получите " + totalD.toFixed(2) + " Долларов или " + totalE.toFixed(2) + " Евро."); 	
+
+</script>
