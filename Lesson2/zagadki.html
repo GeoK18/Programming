@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var newgame = "да";
+	newgame = newgame.toLowerCase();
+	while (newgame == "да" ) {
+
+		var score = 0;
+
+		var zag1 = prompt ("Загадка 1.  \nВисит груша, нельзя скушать.");
+		if (zag1 == "лампа" || zag1 == "лампочка" ||zag1 == "Лампа" ||zag1 == "Лампочка") {
+			var Answer = "Вы угадали!"
+			score = score + 1
+		} else {
+			var Answer = "Ответ не правильный. \nПравильный ответ: ЛАМПОЧКА."
+		}
+		alert(Answer + " \nПравильных ответов: " + score);
+
+		var zag2 = prompt ("Загадка 2.  \nСидит девица, сама в темнице, а коса на улице.");
+		if (zag2 == "морковь" || zag2 == "морковка" ||zag2 == "МОРКОВЬ" ||zag2 == "МОРКОВКА") {
+			var Answer = "Вы угадали!"
+			score = score + 1
+		} else {
+			var Answer = "Ответ не правильный. \nПравильный ответ: МОРКОВЬ"
+		}
+		alert(Answer + " \nПравильных ответов: " + score);
+
+		var zag3 = prompt ("Загадка 3.  \nШла Саша по ... .");
+		if (zag3 == "шоссе" || zag3 == "Шоссе" ||zag3 == "ШОССЕ" ) {
+			var Answer = ("Вы угадали! \nЭто действительно " + zag3 + ". " )
+			score = score + 1
+		} else {
+			var Answer = "Ответ не правильный. \nПравильный ответ: ШОССЕ"
+		}
+		alert(Answer + " \nПравильных ответов: " + score);
+
+		var newgame = prompt ("Сыграем ещё?")
+		}
+
+	if (newgame != "да" || newgame != "ДА" || newgame != "Да" ) {
+		alert ("Спасибо за игру, вы угадали " + score + " загадки. \nДо свидания!")
+	}
+
+
+
+
+
+</script>
