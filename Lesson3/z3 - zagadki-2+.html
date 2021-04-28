@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var newgame = "да";
+	
+	while (newgame == "да" ) {
+
+		function riddle (question, answer){
+			var userAnswer = prompt(question);
+			userAnswer = userAnswer.toLowerCase();
+
+			for(var i = 0; i < answer.length; i++){
+
+				if (userAnswer == answer[i]) {
+					score = score + 1
+					alert("Вы угадали!" + " \nПравильных ответов: " + score);
+					return;
+				}  
+					
+			}	
+			alert("Ответ не правильный. \nПравильный ответ: " + answer);	
+		}	
+		
+		var score = 0;
+
+		riddle("Загадка 1.\nВисит груша, нельзя скушать.", ["лампа","лампочка", "яблоко"]);
+		riddle("Загадка 2.\nСидит девица, сама в темнице, а коса на улице.", ["морковь","морковка"]);
+		riddle("Загадка 3.\nГде шла Саша?", ["шоссе", "по шоссе"]);
+		riddle("Загадка 4.\nСколько лап у носорога?", ["4", "четыре"]);
+
+
+		var newgame = prompt ("Сыграем ещё?")
+		newgame = newgame.toLowerCase();
+		}
+	
+	if (newgame != "да" ) {
+		alert ("Спасибо за игру, вы угадали " + score + " загадки.\n \nДо свидания!")
+	}
+
+
+</script>

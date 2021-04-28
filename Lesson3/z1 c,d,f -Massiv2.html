@@ -1,0 +1,63 @@
+<meta charset='utf-8'>
+<script type="text/javascript">
+
+
+//вычисляем макс. число
+
+function max(a,b){
+	if(a >= b){
+		return a;
+	} else {
+		return b;
+	}
+}
+
+var one = +prompt ("Введите первое число:");
+var two = +prompt ("Введите второе число:");
+var a = max(one, two);
+
+var next = +prompt ("Введите ещё число:");
+var e = max(a, next);
+//	alert("Максимальное из всех введённых чисел: \n"  + e);
+
+var next2 = +prompt ("И ещё одно число введите:");
+var n = max(e, next2);
+	alert("Максимальное из всех введённых чисел: \n"  + n);
+
+
+//вычисляем мин. число
+
+function min(a,b){
+	if(a <= b){
+		return a;
+	} else {
+		return b;
+	}
+}
+var a = min(one, two);
+var e = min(a, next);
+var n = min(e, next2);
+	alert("Минимальное введённое из всех чисел: \n"  + n);
+
+
+// вычисляем чётные числа
+
+function evenMas(n){
+
+	var even = [];
+	for(i = 0; i < n.length; i++) {
+		if(n[i] % 2 == 0) {
+			even.push(n[i]);
+		}
+		
+	}
+	return even
+
+}
+	if (evenMas([one, two, next, next2]) == 0) 
+		alert("Не было введено ни одно чётное число.");
+	 else 
+		alert("Вами были введены следующие чётные числа: \n"  + evenMas([one, two, next, next2]));
+	
+
+</script> 

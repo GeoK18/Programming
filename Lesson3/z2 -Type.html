@@ -1,0 +1,94 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	function generateText(letters, length){
+		
+		var text = ""; //сначала значение пустое
+		for(var i = 0; i < length; i++){
+			var n = getRandomNumber(letters.length - 1);
+			text = text + letters[n];
+		}
+
+		return text;
+	}
+
+	function getRandomNumber(max){
+		return Math.round(Math.random()*max);
+	}
+//информационная табличка перед каждым уровнем
+	var putFinger = "Поставьте пальцы левой руки следующим образом: \nмизинец — на Ф, безымянный палец — на Ы, средний — на В, указательный — на А.\nПоставьте пальцы правой руки следующим образом:\nмизинец — на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О.\n\nЗапомните расположение пальцев и неспеша набирайте текст. Старайтесь не смотреть на клавиатуру.";
+	
+
+	function tryAnswer(text, userText){     //сверяем ответ
+		if (userText == text)
+			alert("Отлично! Всё правильно! \nПереходим на следующий Уровень.");		
+		else if (userText == "0") 
+			alert("Пропускаем уровень... Переходим к следующему.")
+		else 
+			alert("Вы ошиблись. Попробуйте ещё раз.");
+		}
+
+	alert("Привет! Давай научимся печатать?");
+
+	
+	var text = 0;
+	while(text != userText){   //цикл, внутри которого задание повторяется бесконечно, пока ответ пользователя не совпадет с генерированным или не будет прервано вводом "0".
+		if (userText == "0") break;
+
+		alert(putFinger);
+		alert("Уровень 1. \nПечатаем буквы Ф и А.")
+		var text = generateText(["ф", "а"], 10); // здесь функция, которая  генерирует две буквы 10 раз.
+
+		var userText = prompt("Повторяйте последовательность букв. \nДля пропуска уровня нажмите 0. \n\n" + text); // показываем пользователю текст, который нужно повторить
+		userText = userText.toLowerCase();
+		
+		tryAnswer(text, userText); //сравниваем текст пользователя со сгенерированным текстом
+	}
+	
+	var text = 0;
+	var userText = 1;
+	while(text != userText){   
+		if (userText == "0") break;
+
+		alert(putFinger);
+		alert("Уровень 2. \nДобавляем буквы Ы и В.")
+
+		var text = generateText(["ы", "в"], 10);
+		var userText = prompt(text);
+		userText = userText.toLowerCase();
+		tryAnswer(text, userText); 
+	}	
+
+	var text = 0;
+	var userText = 1;
+	while(text != userText){   
+		if (userText == "0") break;
+
+		alert(putFinger);
+		alert("Уровень 3. \nТеперь добавим ПРАВУЮ руку и буквы О и Ж.")
+
+		var text = generateText(["о", "ж"], 10);
+		var userText = prompt(text);
+		userText = userText.toLowerCase();
+		tryAnswer(text, userText);
+
+	}	
+
+	var text = 0;
+	var userText = 1;
+	while(text != userText){   
+		if (userText == "0") break;
+
+		alert(putFinger);
+		alert("Уровень 4. \nДобавляем буквы Л и Д.")
+
+		var text = generateText(["л", "д"], 10);
+		var userText = prompt(text);
+		userText = userText.toLowerCase();
+		tryAnswer(text, userText); 
+
+	}	
+
+	alert("Вы отлично потренировались! До новых встреч!");
+
+</script>

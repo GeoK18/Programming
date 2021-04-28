@@ -1,0 +1,42 @@
+<meta charset='utf-8'>
+<script type="text/javascript">
+
+var q = +prompt ("Введите количество элементов массива:"); 
+
+function mass(q) {
+    var mass = [];
+    	for(var i = 1; i <= q; i++) { 
+        	mass.push(i);
+    	}
+    return mass;	
+	
+}
+	alert("Массив из заданного количества элементов: \n"  + mass(q));
+
+mas = mass(q);
+
+function sumMas(){
+	var sumMas = 0
+	for (var i = 0; i < mas.length; i++) {
+		sumMas += mas[i];		
+	}
+	return sumMas;
+}
+	alert("Сумма чисел массива: \n"  + sumMas());
+
+// дописывание по домашке
+
+function max(){
+	var max = mas[0];
+	for(var i = 1; i < mas.length; i++){
+		if(mas[i] > max)
+			max = mas[i];
+	}
+	return max
+}
+	alert("Максимальное число: \n"  + max());
+
+
+
+
+</script> 
